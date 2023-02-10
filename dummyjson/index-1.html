@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas DummyJSON</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="jquery.js" defer></script>
+    <script src="ajax.js" defer></script>
+    <script src="bootstrap-5.2.0-dist/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <div class="container mt-3 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Tugas DummyJSON</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Data Barang
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" id="get">GET</a></li>
+                          <li><a class="dropdown-item" id="show">SHOW</a></li>
+                          <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" id="post">POST</a></li>
+                        </ul>
+                      </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Data Pelanggan
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Tambah</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Order
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Tambah Order</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="row mt-4 text-center ms-2">
+            <h1>Data Barang</h1>
+            <hr>
+            <div class="col">
+                <br>
+                <table id="table" class="table">
+                    <thead class="table-success">
+                        <tr>
+                            <th>No</th>
+                            <th>Item</th>
+                            <th>Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>            
+            </div>
+            <div class="col">
+                    <div id="isi"></div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Input Data</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <input type="number" name="" hidden id="id">
+
+                        <label class="form-label mt-4" for="">Title</label>
+                        <input class="form-control" type="text" name="" id="title">
+                        
+                        <label class="form-label mt-4" for="">Description</label>
+                        <input class="form-control" type="text" name="" id="des">
+                        
+                        <label for="" class="mt-4">Select Category</label>
+                        <select class="form-select" name="" id="cat">
+                        </select>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="save">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
